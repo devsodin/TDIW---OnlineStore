@@ -1,26 +1,25 @@
 body {
     color: white;
-    background-color: lightgray;
-
 }
 
-
 .top-bar {
-    height: 20%;
     background-color: darkgrey;
     width: 100%;
+    top:10%;
 }
 
 .logo-title {
     display: inline;
     margin: 1%;
     text-align: left;
+    float: left;
 }
 
 .nav-bar {
     display: inline-block;
     width: 50%;
-    float: left
+    float: left;
+
 }
 
 .bar-opt{
@@ -51,6 +50,7 @@ body {
     height: 100%;
     background-color: black;
     position: fixed;
+    top: 20%;
 }
 
 .sidebar-block {
