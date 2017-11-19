@@ -33,9 +33,9 @@
                 <input type="text" placeholder="Specify your gender" name="uname">
 
                 <label><p>Mail*</p></label>
-                <input type="password" placeholder="Enter Password" name="passwd" required>
+                <input type="text" placeholder="Enter Password" name="passwd" required>
                 <label><p>Confirm Mail*</p></label>
-                <input type="password" placeholder="Enter Password" name="passwd" required>
+                <input type="text" placeholder="Enter Password" name="passwd" required>
 
                 <label><p>Password*</p></label>
                 <input type="password" placeholder="Enter Password" name="passwd" required>
@@ -43,6 +43,14 @@
                 <label><p>Password*</p></label>
                 <input type="password" placeholder="Enter Password" name="passwd" required>
 
+                <label><p>Address*</p></label>
+                <input type="text" placeholder="Enter Address" name="address" required>
+
+                <label><p>City*</p></label>
+                <input type="text" placeholder="Enter city" name="city" required>
+
+                <label><p>Postal Code*</p></label>
+                <input type="text" placeholder="Enter Postal Code" name="cp" required>
 
                 <button type="submit">Login</button>
             </div>

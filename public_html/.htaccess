@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Entrar usuari i contrasenya"
-AuthUserFile /tdiw/tdiw-d8/public_html/.htpasswd
-Require valid-user

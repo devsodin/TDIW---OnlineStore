@@ -1,76 +1,8 @@
-body {
-    color: white;
+body{
+    background-color: white;
+    background-image: url(../../images/bg.jpg);
+    background-size: cover;
 }
 
-.top-bar {
-    background-color: darkgrey;
-    width: 100%;
-    top:10%;
-}
-
-.logo-title {
-    display: inline;
-    margin: 1%;
-    text-align: left;
-    float: left;
-}
-
-.nav-bar {
-    display: inline-block;
-    width: 50%;
-    float: left;
-
-}
-
-.bar-opt{
-    display: inline-block;
-    padding: 0% 6px;
-    border: 4%;
-    
-}
-.bar-opt:hover{
-    background-color: purple;
-}
-
-.login-register {
-    display: inline-block;
-    height: 50px;
-    background-color: green;
-}
-
-.button {
-    display: block;
-    background-color: purple;
-    display: inline-block;
-}
-
-.left-sidebar {
-    display: block;
-    width: 15%;
-    height: 100%;
-    background-color: black;
-    position: fixed;
-    top: 20%;
-}
-
-.sidebar-block {
-    display: block;
-    background-color: purple;
-    position: relative;
 
 
-}
-
-.sidebar-el{
-    display: block;
-    margin: 2%
-        
-}
-.sidebar-el:hover{
-    color: darkgray;
-}
-
-.products{
-    display: ;
-    
-}

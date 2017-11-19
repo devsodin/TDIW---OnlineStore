@@ -1,4 +1,4 @@
 <?php
-require_once '../views/default/login.html';
-include '../views/default/login.html';
+require_once(__ROOT__ . '/views/default/navBar.php');
+require_once(__ROOT__ . '/views/default/login.php');
 ?>file
