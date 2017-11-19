@@ -1,17 +1,8 @@
 <!DOCTYPE html>
+<link rel=stylesheet href="./views/default/css/login-register.css"/>
     <hmtl>
-        <head>
-            <title>ENP</title>
-            <meta lang="en" charset="UTF-8">
-            <link rel="icon" href="a.ico" type="image/x-icon"/>
-            <link rel=stylesheet href="view/default/css/index.css"/>
-        </head>
         <body>
-            <form action="../../controllers/login.php" method="post">
-                <div class="imgcontainer">
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-                </div>
-
+            <form class="translucid" action="#" method="post">
                 <div class="user-pass-block">
                     <label><p>Mail:</p></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
