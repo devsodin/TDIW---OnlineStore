@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <link rel=stylesheet href="./views/default/css/login-register.css"/>
+
 <hmtl>
     <body>
-        <form id="register" action='?action=register' method="post" class="translucid" accept-charset="UTF-8">
+        <form id="register" method="post"  class="translucid" accept-charset="UTF-8" onsubmit="return">
             <div class="user-pass-block">
-
                 <label><p>Name*</p></label>
-                <input type="text" placeholder="Enter Name" name="name" required>
+                <input type="text" placeholder="Enter Name" name="name" id="name" required>
                 <label><p>Surname*</p></label>
-                <input type="text" placeholder="Enter Surname" name="surname" required>
+                <input type="text" placeholder="Enter Surname" name="surname" id="surname" required>
 
                 <label><p>Mail*</p></label>
-                <input type="email" placeholder="Enter mail" name="mail" required>
-                <label><p>Repeat mail*</p></label>
-                <input type="email" placeholder="Enter mail" name="mail2" required>
+                <input type="email" placeholder="Enter mail" name="mail" id="mail" required>
 
                 <label><p>Password*</p></label>
-                <input type="password" placeholder="Enter Password" name="passwd" required>
-                <label><p>Repeat password*</p></label>
-                <input type="password" placeholder="Enter Password" name="passwd2" required>
+                <input type="password" placeholder="Enter Password" name="passwd" id="passwd" required>
 
                 <label><p>Address*</p></label>
-                <input type="text" placeholder="Enter Address" name="address" required>
+                <input type="text" placeholder="Enter Address" name="address" id="address" required>
 
                 <label><p>City*</p></label>
-                <input type="text" placeholder="Enter city" name="city" required>
+                <input type="text" placeholder="Enter city" name="city" id="city" required>
 
                 <label><p>Postal Code*</p></label>
-                <input type="text" placeholder="Enter Postal Code" name="cp" required>
+                <input type="text" placeholder="Enter Postal Code" name="cp" id="cp" required>
 
-                <button type="submit">Login</button>
+                <button type="submit" name="register-button">Register</button>
             </div>
         </form>
     </body>
 </hmtl>
+

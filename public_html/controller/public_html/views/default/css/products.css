@@ -1,8 +1,0 @@
-.column {
-    float: left;
-    width: 33.3%;
-    border-color: rgba(0,0,0,0.7);
-    background-color: rgba(0,0,0,0.7);
-    margin: auto 0;
-    box-sizing: border-box;
-}

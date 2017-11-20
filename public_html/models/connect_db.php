@@ -12,6 +12,8 @@ function connect_db(){
         die("Connection failed: " . $mysql->connect_error);
     }
     $mysql->set_charset('utf-8');
+
+
     return $mysql;
 }
 ?>

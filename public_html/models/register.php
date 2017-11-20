@@ -1,40 +1,27 @@
 <?php
 
-function register(){
-    if(isset($_POST['submit'])){
-        $mysql = connect_db();
-        $error = 0;
+function register($mysql)
+{
 
-        $name = mysqli_real_escape_string($mysql,$_POST['name']);
-        $surname = mysqli_real_escape_string($mysql,$_POST['surname']);
+    $name = mysqli_real_escape_string($mysql, $_POST['name']);
+    $surname = mysqli_real_escape_string($mysql, $_POST['surname']);
+    $address = mysqli_real_escape_string($mysql, $_POST['address']);
+    $city = mysqli_real_escape_string($mysql, $_POST['city']);
+    $cp = mysqli_real_escape_string($mysql, $_POST['cp']);
+    $password = mysqli_real_escape_string($mysql, $_POST['passwd']);
+    $password = password_hash($password,PASSWORD_BCRYPT );
+    $mail = mysqli_real_escape_string($mysql, $_POST['mail']);
 
-        $address = mysqli_real_escape_string($mysql,$_POST['address']);
-        $city = mysqli_real_escape_string($mysql,$_POST['city']);
-        $cp = mysqli_real_escape_string($mysql,$_POST['cp']);
+    $insert = mysqli_prepare($mysql,"INSERT into user (Name,Surname,Address,City,Postal_Code,Password,Mail) VALUES (?,?,?,?,?,?,?)");
 
-        if($_POST['passwd'] != $_POST['passwd2']){
-            $error = 1;
-        }else{
-            $password = mysqli_real_escape_string($mysql,$_POST['passwd']);
-        }
+    $insert->bind_param('ssssiss',$name,$surname,$address,$city,$cp,$password,$mail);
 
-        if($_POST['mail'] != $_POST['mail2']){
-            $error = 1;
-        }else{
-            $mail = mysqli_real_escape_string($mysql,$_POST['mail']);
-        }
 
-        if(!$error) {
-            $stmt = $mysql->prepare('INSERT INTO user (name, surname, mail, password, address, city, postal_code) VALUES (?,?,?,?,?,?,?)');
-            $stmt->bind_param($name, $surname, $mail, $password, $address, $city, $cp);
-            $stmt->execute();
 
-        }
-        $stmt->close();
-        $mysql->close();
-        return $error;
-    }
-    return -1;
+    $insert->execute();
+
+
+
+
 }
-
 ?>

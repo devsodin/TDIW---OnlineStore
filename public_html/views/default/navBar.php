@@ -2,7 +2,6 @@
 <head>
     <title>ENP</title>
     <meta lang="en" charset="UTF-8">
-    <link rel="icon" href="a.ico" type="image/x-icon"/>
     <link rel=stylesheet href="./views/default/css/navbar.css"/>
 </head>
 <body>
