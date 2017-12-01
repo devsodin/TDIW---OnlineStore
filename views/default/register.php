@@ -3,7 +3,7 @@
 
 <hmtl>
     <body>
-        <form id="register" method="post"  class="translucid" accept-charset="UTF-8" onsubmit="return">
+        <form id="register" method="post"  class="translucid" accept-charset="UTF-8" onsubmit="?action=register">
             <div class="user-pass-block">
                 <label><p>Name*</p></label>
                 <input type="text" placeholder="Enter Name" name="name" id="name" required>

@@ -12,9 +12,8 @@
                 <button class="dropbutton">Categories</button>
                 <div class="dynamicdropdown">
                     <?php
-                    for($i = 0; $i < $categories->num_rows; $i++){
-                        $category = $categories->fetch_assoc()['name'];
-                        echo '<a href=action=products&category='.$category.'>'.$category.'</a>';
+                    foreach($categories as $category){
+                        echo '<a href=action=products&category='.$category['Name'].'>'.$category['Name'].'</a>';
                     }
                     ?>
                 </div>

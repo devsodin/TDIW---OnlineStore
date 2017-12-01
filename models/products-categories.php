@@ -1,12 +1,11 @@
 <?php
-    function get_categories($mysql){
-        $sql = "SELECT name from category";
-        $categories = mysqli_query($mysql,$sql);
+    function get_categories($connection){
+        $sql = $connection->prepare("SELECT `Name` FROM `Category` WHERE 1");
+        $sql->execute();
 
-        if(mysqli_num_rows($categories) == 0){
-            $categories = 'No Categories availables';
-        };
+        $categories = $sql->fetchALl(PDO::FETCH_ASSOC);
         return $categories;
+
     }
 
     function list_products_by_category($mysql,$category){
