@@ -10,6 +10,9 @@ function selectAction(){
         case ('register'):
             include __ROOT__.'/controllers/register.php';
             break;
+        case ('products'):
+            include __ROOT__.'/controllers/products.php';
+            break;
         default:
             include __ROOT__.'/controllers/index.php';
             break;

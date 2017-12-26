@@ -2,34 +2,30 @@
 <head>
     <title>ENP</title>
     <meta lang="en" charset="UTF-8">
-    <link rel=stylesheet href="./views/default/css/navbar.css"/>
+    <link rel=stylesheet href="./views/css/navbar.css"/>
+    <script src="./views/js/products.js" type="text/javascript" defer></script>
+
+
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><a href=?action=#>ENP</a></h1>
-            <div class="dropdown">
-                <button class="dropbutton">Categories</button>
-                <div class="dynamicdropdown">
-                    <?php
-                    foreach($categories as $category){
-                        echo '<a href=action=products&category='.$category['Name'].'>'.$category['Name'].'</a>';
-                    }
-                    ?>
-                </div>
+<header>
+    <nav>
+        <h1><a href=?action=index>ENP</a></h1>
+        <div class="dropdown">
+            <a class="dropbutton" href="?action=products" >Categories</a>
+            <div class="dynamicdropdown">
+                <?php
+                foreach($categories as $category){
+                    echo '<a id="'.$category['id'].'" onclick="showProducts('.'\''.$category['id'].'\''.')">'.$category['Name'].'</a>';
+                }
+                ?>
             </div>
-            <a href="?action=products">Deals</a>
-            <a href=?action=login>Login</a>
-            <a href="?action=register">Register</a>
-            <div class="dropdown">
-                <button class="user-bar dropdown">Username</button>
-            </div>
-        </nav>
-
-    </header>
-
-
-    
-</body>
-
-</html>
+        </div>
+        <a href=?action=login>Login</a>
+        <a href="?action=register">Register</a>
+        <div class="dropdown">
+            <button class="user-bar dropdown">Username</button>
+        </div>
+    </nav>
+</header>
+<section id="content">

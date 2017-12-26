@@ -1,5 +1,5 @@
 body{
-    background-image: url(../../images/bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,11 +44,12 @@ nav a:hover .dropdown:hover{
 
 
 .dynamicdropdown{
+    margin-top:60px ;
     display: none;
     position: absolute;
     background-color: rgb(191, 191, 191);
     z-index: 1;
-    min-width: 100px;
+    min-width: 90px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
@@ -66,4 +67,17 @@ nav a:hover .dropdown:hover{
 
 .user-bar{
     display: none;
+}
+
+
+.column {
+    float: left;
+    width: 33.3%;
+    border-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
+    margin: auto 0;
+    box-sizing: border-box;
+}
+.product-image{
+    height: 100px;
 }

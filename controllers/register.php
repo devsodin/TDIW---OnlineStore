@@ -1,14 +1,12 @@
 <?php
-require_once (__ROOT__.'/models/products-categories.php');
+require_once(__ROOT__ . '/models/loadCategories.php');
 require_once (__ROOT__.'/models/connect_db.php');
 $connection = connect_db();
 $categories = get_categories($connection);
 
 require_once (__ROOT__.'/models/register.php');
 if(isset($_POST['name'])) {
-    echo 'abc';
     register($connection);
-    echo 'zzz';
 }
 
 

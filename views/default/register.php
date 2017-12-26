@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<link rel=stylesheet href="./views/default/css/login-register.css"/>
+<link rel=stylesheet href="./views/css/login-register.css"/>
 
-<hmtl>
-    <body>
         <form id="register" method="post"  class="translucid" accept-charset="UTF-8" onsubmit="?action=register">
             <div class="user-pass-block">
                 <label><p>Name*</p></label>
@@ -28,6 +25,5 @@
                 <button type="submit" name="register-button">Register</button>
             </div>
         </form>
-    </body>
-</hmtl>
+</section>
 
