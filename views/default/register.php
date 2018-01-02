@@ -1,5 +1,3 @@
-<link rel=stylesheet href="./views/css/login-register.css"/>
-
         <form id="register" method="post"  class="translucid" accept-charset="UTF-8" onsubmit="?action=register">
             <div class="user-pass-block">
                 <label><p>Name*</p></label>

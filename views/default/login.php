@@ -1,5 +1,4 @@
-<link rel=stylesheet href="./views/css/login-register.css"/>
-    <form class="translucid" action="#" method="post" onsubmit="?action=index">
+    <form class="translucid" action="#" method="post" onsubmit="?action=login">
         <div class="user-pass-block">
             <label><p>Mail:</p></label>
             <input type="text" placeholder="Enter Username" name="uname" required>

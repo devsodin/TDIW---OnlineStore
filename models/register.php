@@ -8,7 +8,7 @@ function register($connection)
     $city =  $_POST['city'];
     $cp =  $_POST['cp'];
     $password =  $_POST['passwd'];
-    $password = password_hash($password,PASSWORD_BCRYPT );
+    $password = password_hash($password,PASSWORD_DEFAULT );
     $mail = $_POST['mail'];
 
 

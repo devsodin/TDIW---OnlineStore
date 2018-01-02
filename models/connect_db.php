@@ -12,9 +12,9 @@
             //echo "Connected successfully";
             return $connection;
         }
-        catch(PDOException $e)
+        catch(PDOException $error)
         {
-            echo "Connection failed: " . $e->getMessage();
+            echo "Connection failed: " . $error->getMessage();
             die();
         }
     }
