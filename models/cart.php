@@ -9,7 +9,15 @@
 session_start();
 switch ($_GET['mode']){
     case 'show':
-        if(isset($_SESSION['products'])){
+        echo '<table class="product-table">
+    <tr>
+        <th>Name</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th> </th>
+</tr>';
+        if(isset($_SESSION['products']) and !empty($_SESSION['products'])){
 
             $productstring = '';
             $execparam = [];
@@ -36,19 +44,24 @@ switch ($_GET['mode']){
             }
 
             $i = 0;
+            ;
+
             foreach ($_SESSION['products'] as $prID => $q){
                 $qp = $products[$i]['q'] * $products[$i]['Price'];
                 $priceq[$prID] = $products[$i]['Price'] * $_SESSION['products'][$prID];
-                echo "<div class='product-line'>
-    <h1 class='product-name'>{$products[$i]['Name']}</h1>
-    <p class='product-line-data'>Unit Price: {$products[$i]['Price']}</p>
-    <p class='product-line-data'>Quantity: {$products[$i]['q']}</p>
-    <p class='product-line-data'>Total Price: {$qp}</p></</br></<br>
-</div>";
+                echo "<tr>
+    <td>{$products[$i]['Name']}</td>
+    <td>{$products[$i]['Price']}</td>
+    <td class='product-line-data'>{$products[$i]['q']}</td>
+    <td class='product-line-data'>{$qp}</td></</br></<br>
+    <td><a class='remove-item' onclick='removeProductCart({$products[$i]['Id']})'>Remove</a></td>
+</tr>";
                 $i++;
             }
 
 
+        }else{
+            echo '<tr><th  colspan="5">There\'s no products in cart</th></tr>';
         }
 
 

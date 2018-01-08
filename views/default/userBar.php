@@ -1,7 +1,7 @@
 
     <header>
         <nav>
-            <a href=?action=index><h3>ENP</h3></a>
+            <a class="ENP-title" href=?action=index><img class="ENP-title" src="views/images/logo.png"></a>
             <div class="dropdown">
                 <a class="dropbutton" onclick="showProducts(0)" >Categories</a>
                 <div class="dynamicdropdown">
@@ -14,8 +14,9 @@
             </div>
             <a id="login" href=?action=login>Login</a>
             <a id="register" href="?action=register">Register</a>
-            <a>
-                <input type="text" class="search-bar" id="q" name="q" onkeyup="search()" placeholder="Search">
+            <a><form onsubmit="searchPage()">
+                    <input type="text" class="search-bar" id="q" name="q" onkeyup="search()" placeholder="Search">
+                </form>
             </a>
             <div class="user">
                 <div class="dropdown">

@@ -7,9 +7,6 @@ define('__RES_PATH__', 'views/images/');
 
 function load(){
 
-    var_dump($_GET);
-
-
     require_once(__ROOT__ . '/models/loadCategories.php');
     require_once (__ROOT__.'/models/connect_db.php');
 
@@ -33,9 +30,7 @@ function load(){
             include __ROOT__.'/controllers/checkout.php';
             break;
         case ('profile'):
-            include __ROOT__.'/controllers/cart.php';
-            break;
-            include __ROOT__.'/controllers/history.php';
+            include __ROOT__.'/controllers/profile.php';
             break;
         #BACK-END
         case ('management'):
@@ -48,7 +43,10 @@ function load(){
         case('m_products'):
             include __ROOT__.'/controllers/m_products.php';
             break;
-
+        case('search'):{
+            include __ROOT__.'/controllers/search.php';
+            break;
+        }
         default:
             include __ROOT__.'/controllers/index.php';
             break;

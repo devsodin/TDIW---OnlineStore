@@ -13,7 +13,6 @@ require_once (__ROOT__.'/models/m_products.php');
 session_start();
 if(session_status() == PHP_SESSION_ACTIVE and $_SESSION['Admin']){
     $mode = $_GET['m'];
-    echo $mode;
     switch ($mode){
         case 'list':
             loadProductList($connection);

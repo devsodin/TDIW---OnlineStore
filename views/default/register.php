@@ -18,7 +18,7 @@
                 <input type="text" placeholder="Enter city" name="city" id="city" required>
 
                 <label><p>Postal Code*</p></label>
-                <input type="text" placeholder="Enter Postal Code" name="cp" id="cp" required>
+                <input type="number" min="0" max="99999" placeholder="Enter Postal Code" name="cp" id="cp" required>
 
                 <button type="submit" name="register-button">Register</button>
             </div>

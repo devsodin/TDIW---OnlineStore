@@ -10,9 +10,7 @@ session_start();
 
 function createOrder($connection){
     $sql = $connection->prepare("INSERT INTO Orders (Id_user) VALUES (?)");
-    echo $_SESSION['id'];
     $sql->execute(array($_SESSION['id']));
-    if($sql){echo 'ok';}else{echo 'nook';}
 }
 
 function getOrderId($connection){
@@ -49,7 +47,6 @@ if(isset($_SESSION['id'])){
         $i = 0;
         foreach ($products as $product) {
             foreach ($_SESSION['products'] as $prID => $q){
-                echo 'a';
                 if($prID == $product['Id']){
                     $products[$i]['q'] = $q;
 
@@ -68,25 +65,33 @@ if(isset($_SESSION['id'])){
 
         unset($_SESSION['products']);
         $n = count($summary);
-        echo '<h1>Summary</h1>
-<div class="summary">';
+        echo '<table class="product-table"><tr><th colspan="4">Summary</th></tr>';
         $total = 0;
-        echo "<div class='order-data'>
-    <p>Order ID:{$orderId}</p>
-</div>";
+        echo "<tr><th colspan='3'>Order ID</th><th>{$orderId}</th></tr>";
+        echo '<tr>
+        <th>Name</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+</tr>';
         for ($i = 0; $i < $n; $i++){
-            echo '<div class="productline">';
-            echo "<p>{$summary[$i]['Name']}</p><p>{$summary[$i]['Quantity']}</p><p>{$summary[$i]['Price']}</p><p>{$summary[$i]['Total_Price']}</p>";
+            echo "<tr>
+    <td>{$summary[$i]['Name']}</td>
+    <td>{$summary[$i]['Quantity']}</td>
+    <td>{$summary[$i]['Price']}</td>
+    <td>{$summary[$i]['Total_Price']}</td>
+</tr>";
             $total += $summary[$i]['Total_Price'];
 
-            echo '</div>';
         }
         $sql = $connection->prepare("UPDATE Orders SET Price = ? WHERE Id = ?");
         $sql->execute(array($total,$orderId));
-        echo "</div><h3>{$total}</h3>";
+        echo "<tr><td colspan='3'>Total</td><td>{$total}</td></tr>";
 
     }else{
-        echo 'no products';
+        echo "<script>window.alert('You must buy some products to proceed checkout');
+            location.replace('index.php');
+            </script>";
     }
 }else{
     echo '<script>window.alert("You need to be logged in");

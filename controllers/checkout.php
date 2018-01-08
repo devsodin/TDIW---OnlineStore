@@ -8,6 +8,7 @@
 
 $connection = connect_db();
 $categories = get_categories($connection);
+session_start();
 require_once (__ROOT__.'/models/navbar.php');
 
 require_once (__ROOT__.'/models/checkout.php');

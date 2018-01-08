@@ -1,4 +1,4 @@
-<form enctype="multipart/form-data" method="POST" accept-charset="UTF-8" onsubmit="?action=m_products&m=add">
+<form class="translucid product-form" enctype="multipart/form-data" method="POST" accept-charset="UTF-8" onsubmit="?action=m_products&m=add">
     <br class="user-pass-block">
         <label>Name</label>
         <input type="text" placeholder="Product Name" name="pName" id="pName" required>
@@ -10,7 +10,7 @@
         <input type="text" placeholder="Product Short Description" name="pSDesc" id="pSDesc" required>
 
         <label>Price</label>
-        <input type="text" placeholder="Product Price" name="pPrice" id="pPrice" required>
+        <input type="number" min="0" max="99999" placeholder="Product Price" name="pPrice" id="pPrice" required>
 
     <label>Category</label>
         <select name="pCategory" id="pCategory">

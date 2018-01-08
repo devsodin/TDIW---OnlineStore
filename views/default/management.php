@@ -17,7 +17,6 @@
             <div class="dropdown">
                 <a id="user-bar" class="dropbutton user-bar"><?php echo $name ?></a>
                 <div class="user-bar dynamicdropdown">
-                    <a id="account">My Account</a>
                     <a id="logout" onclick="logout()" >Logout</a>
 
                 </div>
